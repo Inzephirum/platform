@@ -5,4 +5,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./channel":"ndtX"}],"A5OK":[function(require,module,exports) {
 "use strict";var e=require("./platform");(0,e.setupChannelInServiceWorker)(self);
 },{"./platform":"kFMK"}]},{},["A5OK"], null)
-//# sourceMappingURL=/sw.js.map
+//# sourceMappingURL=sw.js.map

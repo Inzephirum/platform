@@ -16,7 +16,7 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "bulid:example": "npx parcel build ./src/index.html --out-dir docs"
+    "bulid:example": "npx parcel build ./src/index.html --out-dir docs --public-url '.'"
   },
   "peerDependencies": {},
   "husky": {
