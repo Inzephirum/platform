@@ -1,5 +1,10 @@
 import interact from 'interactjs';
-import { PlatformMessage, PlatformInputMessage, createChannel } from './platform';
+import {
+  PlatformMessage,
+  PlatformInputMessage,
+} from './platform/channel/types';
+
+import { createChannel } from './platform/channel/shared-worker-channel';
 
 const $form = document.getElementById('signin') as HTMLFormElement;
 const $input = document.getElementById('login') as HTMLInputElement;
@@ -26,8 +31,8 @@ channel.listen(message => {
   addToLog(type, message);
 
   if (message.input.name === 'resize') {
-    const {height, width} = message.input.body;
-    $input.style.height =  height ? `${height}px` : 'auto';
+    const { height, width } = message.input.body;
+    $input.style.height = height ? `${height}px` : 'auto';
     $input.style.width = width ? `${width}px` : 'auto';
   }
 });
